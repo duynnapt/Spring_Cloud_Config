@@ -8,7 +8,6 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
-import java.util.List;
 import java.util.Map;
 
 @SpringBootApplication
@@ -22,17 +21,19 @@ public class ClientApplication {
 
     /**
      * Output property from cloud-config-server on startup of app,
-     *
+     * <p>
      * also can be seen at:
      * http://localhost:8080/env/info.foo
      */
     @Bean
     public CommandLineRunner printProperties(
-            @Value("${info.foo}") final String fooProperty,
-            @Value("${info.someList}") final String info
-    )  {
+            @Value("${myconfig.database.url}") String url,
+            @Value("${myconfig.database.user}") String user,
+            @Value("${myconfig.database.password}") String pass,
+            @Value("${myconfig.notification.success}") String success
+    ) {
         return args -> {
-            LOGGER.info("info.foo is: [{}], {}", fooProperty, info);
+            LOGGER.info("info.foo is: [{}], {}, {}, {}", url, user,pass,success);
         };
     }
 

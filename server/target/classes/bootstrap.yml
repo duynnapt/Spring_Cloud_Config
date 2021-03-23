@@ -5,12 +5,11 @@ spring:
     config:
       server:
         git:
-#          uri: file://${HOME}/config-repo
-          uri: file:////home/duynn5/Downloads/hehehe/spring-cloud-config-example
-#          uri: https://github.com/ericdahl/spring-cloud-config-example
-
+          #          uri: file://${HOME}/config-repo
+          uri: https://github.com/duynnapt/Spring_Cloud_Config
           # Search in the 'server-config' directory of the repo. This generally wouldn't
           # be used because the configs would be in the root directory, but because
           # this example repo is hosting both the code and the configs, we're
           # isolating the configuration files into their own directory.
           searchPaths: server-config
+

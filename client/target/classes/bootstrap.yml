@@ -7,5 +7,18 @@ spring:
       label: master # optional
       uri: http://localhost:8888 # optional
 
-info:
-  someList: aaaaaaaaaaaaaa
+# Config data exposed by config server
+
+#myconfig:
+#  database:
+#    user: root_root_updated
+#  notification:
+#    success: success success success_updated
+myconfig:
+  database:
+    url: jdbc:mysql://localhost:43306/bill_service_2222222
+#    user: root
+#    password:
+  notification:
+    success: Successsssssssssss2222
+#    fail: Failllllllllllllllll2222
