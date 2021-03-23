@@ -1,0 +1,10 @@
+# Config data exposed by config server
+
+myconfig:
+  database:
+    url: jdbc:mysql://localhost:43306/bill_service
+    user: root
+    password:
+  notification:
+    success: Successsssssssssss
+    fail: Failllllllllllllllll
